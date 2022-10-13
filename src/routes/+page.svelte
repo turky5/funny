@@ -5,12 +5,14 @@
 	let years = 5;
 
 	let total = 0;
+	let monthly = 0;
 
 	const calcRevenew = () => {
 		total = initMoney;
 		for (let i = 0; i < years; i++) {
 			total = total + total * devedenRatio + (monthlyAdd * 12);
 		}
+		monthly = Math.round((total * devedenRatio) / 12);
 	}
 
 	// $: for (let i = 0; i < years; i++) {
@@ -56,8 +58,8 @@
 
 	<button class="bg-orange-400 p-2 text-xl rounded-lg" on:click={calcRevenew}>احسب</button>
 
-	<div class="text-4xl text-center my-6">{Math.round(total)} ريال </div>
-	<div class="text-center text-xl">{Math.round((total * devedenRatio) / 12)} التوزيعات الشهرية </div>
+	<div class="text-3xl text-center my-2"> المبلغ الكلي {Math.round(total)} ريال </div>
+	<div class="text-center text-xl"> التوزيعات الشهرية {monthly} ريال </div>
 </div>
 
 <style>
