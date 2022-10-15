@@ -38,7 +38,11 @@
 		<div class="">
 			حاسبة الاستثمار
 		</div>
-		<div class=""></div>
+		<div class="">
+			<button on:click={handleSwitchDarkMode}>
+				<img alt="appearance" src="/{darkMode ? 'moon' : 'sun'}.png"  class="w-6"/>
+			</button>
+		</div>
 	</div>
 
 	<div class="flex flex-col justify-center items-stretch gap-2">
