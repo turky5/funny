@@ -39,9 +39,7 @@
 			حاسبة الاستثمار
 		</div>
 		<div class="">
-			<button on:click={handleSwitchDarkMode}>
-				<img alt="appearance" src="/{darkMode ? 'moon' : 'sun'}.png"  class="w-6"/>
-			</button>
+			{" "}
 		</div>
 	</div>
 
