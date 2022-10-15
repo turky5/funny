@@ -90,7 +90,7 @@
 	<div class="flex flex-col justify-center items-stretch gap-2">
 		<div class="flex justify-between items-center mb-2">
 			<label for="steps-range" class="block text-xl font-medium">نسبة الأرباح السنوية</label>
-			<div class="text-gray-700 dark:text-gray-300">٪{Math.round(devedenRatio * 100).toLocaleString()}</div>
+			<div class="text-gray-700 dark:text-gray-300">{Math.round(devedenRatio * 100).toLocaleString()} ٪ </div>
 		</div>
 		<input id="steps-range" type="range" min="0.01" max="0.5" step="0.01" bind:value={devedenRatio} class="w-full h-1 bg-black dark:bg-white rounded-full appearance-none cursor-pointer ">
 	</div>
