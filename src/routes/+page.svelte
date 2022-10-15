@@ -90,7 +90,7 @@
 	<div class="flex flex-col justify-center items-stretch gap-2">
 		<div class="flex justify-between items-center mb-2">
 			<label for="steps-range" class="block text-xl font-medium">نسبة الأرباح السنوية</label>
-			<div class="text-gray-700 dark:text-gray-300">%{Math.round(devedenRatio * 100)}</div>
+			<div class="text-gray-700 dark:text-gray-300">٪{Math.round(devedenRatio * 100).toLocaleString()}</div>
 		</div>
 		<input id="steps-range" type="range" min="0.01" max="0.5" step="0.01" bind:value={devedenRatio} class="w-full h-1 bg-black dark:bg-white rounded-full appearance-none cursor-pointer ">
 	</div>
@@ -106,7 +106,7 @@
 	<div class="flex flex-col justify-center items-stretch gap-2">
 		<div class="flex justify-between items-center mb-2">
 			<label for="steps-range" class="block text-xl font-medium">عدد السنوات</label>
-			<div class="text-gray-700 dark:text-gray-300">{years} {years >= 3 && years <= 10 ? 'سنوات':'سنة'}</div>
+			<div class="text-gray-700 dark:text-gray-300">{years.toLocaleString()} {years >= 3 && years <= 10 ? 'سنوات':'سنة'}</div>
 		</div>
 		<input id="steps-range" type="range" min="3" max="30" step="1" bind:value={years} class="w-full h-1 bg-black dark:bg-white rounded-lg appearance-none cursor-pointer ">
 	</div>
@@ -117,7 +117,7 @@
 
 	<div class="text-2xl text-center"> المبلغ الكلي {Math.round(total).toLocaleString()} ريال </div>
 	<div class="text-center text-xl"> التوزيعات الشهرية {monthly.toLocaleString()} ريال </div>
-	<div class="text-center text-lg border p-2 rounded-lg"> عدد زوار الصفحة: {data.record.userVisets} زائر </div>
+	<div class="text-center text-lg border p-2 rounded-lg"> عدد زوار الصفحة: {data.record.userVisets.toLocaleString()} زائر </div>
 </div>
 
 <style>
