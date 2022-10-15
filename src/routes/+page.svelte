@@ -30,17 +30,15 @@
 
 <div class="flex flex-col justify-center items-stretch gap-8 rounded-lg p-4 max-w-lg mx-auto">
 	<div class="flex justify-between items-center text-3xl">
-		<div class="">
+		<div class="flex-1">
 			<button on:click={handleSwitchDarkMode}>
 				<img alt="appearance" src="/{darkMode ? 'sun' : 'moon'}.png"  class="w-6"/>
 			</button>
 		</div>
-		<div class="">
+		<div class="flex-1">
 			حاسبة الاستثمار
 		</div>
-		<div class="">
-			{" "}
-		</div>
+		<div class="flex-1"></div>
 	</div>
 
 	<div class="flex flex-col justify-center items-stretch gap-2">
