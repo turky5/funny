@@ -26,6 +26,42 @@
 					? document.documentElement.classList.add('dark')
 					: document.documentElement.classList.remove('dark');
 	}
+
+	// let req = new XMLHttpRequest();
+
+	// req.onreadystatechange = () => {
+	// 	if (req.readyState == XMLHttpRequest.DONE) {
+	// 		console.log(req.responseText);
+	// 	}
+	// };
+	
+	// req.open("GET", "https://api.jsonbin.io/v3/b/634b01f62b3499323bdfbee4/latest", true);
+	// req.setRequestHeader("X-Master-Key", "$2b$10$b7RAL2sJuISVoLRwMJB.zexLOCzmnvgnV9Simhwe5T2U2JZr4UVLu");
+	// req.send();
+
+	
+
+	let resText = -1;
+
+	// let reqHeader = new Headers();
+	// reqHeader.append('X-Master-Key', '$2b$10$b7RAL2sJuISVoLRwMJB.zexLOCzmnvgnV9Simhwe5T2U2JZr4UVLu');
+	// let initObject = {
+	// 		method: 'GET', headers: reqHeader,
+	// };
+
+	// fetch('https://api.jsonbin.io/v3/b/634b01f62b3499323bdfbee4/latest', initObject)
+	// 		.then(function (response) {
+	// 				return response.json();
+	// 		})
+	// 		.then(function (data) {
+	// 				console.log(data);
+	// 				resText = data.record.userVisets
+	// 		})
+	// 		.catch(function (err) {
+	// 				console.log("Something went wrong!", err);
+	// 		});
+
+	export let data;
 </script>
 
 <div class="flex flex-col justify-center items-stretch gap-6 rounded-lg p-4 max-w-lg mx-auto">
@@ -77,10 +113,11 @@
 
 	<!-- <Meaure title="عدد السنوات" bind:value={years} min={3} max={30} step={1} /> -->
 
-	<button class="bg-orange-400 p-2 text-xl rounded-lg" on:click={calcRevenew}>احسب</button>
+	<button class="bg-orange-400 p-2 text-xl text-black rounded-lg" on:click={calcRevenew}>احسب</button>
 
 	<div class="text-3xl text-center"> المبلغ الكلي {Math.round(total)} ريال </div>
 	<div class="text-center text-xl"> التوزيعات الشهرية {monthly} ريال </div>
+	<div class="text-center text-lg border p-2 rounded-lg"> عدد زوار الصفحة: {data.record.userVisets} زائر </div>
 </div>
 
 <style>
