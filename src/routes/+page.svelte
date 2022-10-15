@@ -64,14 +64,14 @@
 	export let data;
 </script>
 
-<div class="flex flex-col justify-center items-stretch gap-6 rounded-lg p-4 max-w-lg mx-auto">
-	<div class="flex justify-between items-center text-3xl">
+<div class="flex flex-col justify-center items-stretch gap-6 rounded-lg max-w-lg mx-auto">
+	<div class="flex justify-between items-center">
 		<div class="">
-			<button on:click={handleSwitchDarkMode}>
+			<button on:click={handleSwitchDarkMode} class="flex justify-center items-center">
 				<img alt="appearance" src="/{darkMode ? 'sun' : 'moon'}.png"  class="w-6"/>
 			</button>
 		</div>
-		<div class="flex-1">
+		<div class="flex-1 text-3xl">
 			حاسبة الاستثمار
 		</div>
 		<div class="border border-black dark:border-white w-6 h-6 flex justify-center items-center rounded-full text-xl">
@@ -82,9 +82,9 @@
 	<div class="flex flex-col justify-center items-stretch gap-2">
 		<div class="flex justify-between items-center mb-2">
 			<label for="steps-range" class="block text-xl font-medium">مبلغ الاستثمار المبدئي</label>
-			<div class="text-gray-700 dark:text-gray-300">{initMoney} ريال </div>
+			<div class="text-gray-700 dark:text-gray-300">{initMoney.toLocaleString()} ريال </div>
 		</div>
-		<input id="steps-range" type="range" min="50000" max="5000000" step="50000" bind:value={initMoney} class="w-full h-1 bg-black dark:bg-white rounded-full appearance-none cursor-pointer ">
+		<input id="steps-range" type="range" min="10000" max="1000000" step="10000" bind:value={initMoney} class="w-full h-1 bg-black dark:bg-white rounded-full appearance-none cursor-pointer ">
 	</div>
 
 	<div class="flex flex-col justify-center items-stretch gap-2">
@@ -98,9 +98,9 @@
 	<div class="flex flex-col justify-center items-stretch gap-2">
 		<div class="flex justify-between items-center mb-2">
 			<label for="steps-range" class="block text-xl font-medium">المبلغ الشهري المضاف</label>
-			<div class="text-gray-700 dark:text-gray-300">{monthlyAdd} ريال </div>
+			<div class="text-gray-700 dark:text-gray-300">{monthlyAdd.toLocaleString()} ريال </div>
 		</div>
-		<input id="steps-range" type="range" min="100" max="20000" step="100" bind:value={monthlyAdd} class="w-full h-1 bg-black dark:bg-white rounded-lg appearance-none cursor-pointer ">
+		<input id="steps-range" type="range" min="500" max="20000" step="500" bind:value={monthlyAdd} class="w-full h-1 bg-black dark:bg-white rounded-lg appearance-none cursor-pointer ">
 	</div>
 
 	<div class="flex flex-col justify-center items-stretch gap-2">
@@ -115,8 +115,8 @@
 
 	<button class="bg-orange-400 p-2 text-xl text-black rounded-lg" on:click={calcRevenew}>احسب</button>
 
-	<div class="text-3xl text-center"> المبلغ الكلي {Math.round(total)} ريال </div>
-	<div class="text-center text-xl"> التوزيعات الشهرية {monthly} ريال </div>
+	<div class="text-2xl text-center"> المبلغ الكلي {Math.round(total).toLocaleString()} ريال </div>
+	<div class="text-center text-xl"> التوزيعات الشهرية {monthly.toLocaleString()} ريال </div>
 	<div class="text-center text-lg border p-2 rounded-lg"> عدد زوار الصفحة: {data.record.userVisets} زائر </div>
 </div>
 

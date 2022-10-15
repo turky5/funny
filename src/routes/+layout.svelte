@@ -93,11 +93,11 @@
 	</nav>
 </header> -->
 
-<main class="container mx-auto p-4">
+<main class="container mx-auto p-6">
 	<slot />
 </main>
 
-<footer class="container mx-auto px-4">
+<footer class="container mx-auto px-6">
 	<hr class="border-gray-400 my-4" />
 	<span class="block text-sm text-gray-500 text-center"
 		>© 2022 <a href="https://alodhayb.netlify.app/" class="hover:underline">Alodhayb™</a> All
