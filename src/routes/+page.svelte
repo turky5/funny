@@ -79,8 +79,6 @@
 		</div>
 	</div>
 
-	<h2>Turky</h2>
-
 	<div class="flex flex-col justify-center items-stretch gap-2">
 		<div class="flex justify-between items-center mb-2">
 			<label for="steps-range" class="block text-xl font-medium">مبلغ الاستثمار المبدئي</label>
@@ -110,7 +108,7 @@
 			<label for="steps-range" class="block text-xl font-medium">عدد السنوات</label>
 			<div class="text-gray-700 dark:text-gray-300">{years.toLocaleString()} {years >= 3 && years <= 10 ? 'سنوات':'سنة'}</div>
 		</div>
-		<input id="steps-range" type="range" min="3" max="30" step="1" bind:value={years} class="w-full h-1 bg-black dark:bg-white rounded-lg appearance-none cursor-pointer ">
+		<input id="steps-range" type="range" min="2" max="50" step="1" bind:value={years} class="w-full h-1 bg-black dark:bg-white rounded-lg appearance-none cursor-pointer ">
 	</div>
 
 	<!-- <Meaure title="عدد السنوات" bind:value={years} min={3} max={30} step={1} /> -->
