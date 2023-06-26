@@ -79,6 +79,8 @@
 		</div>
 	</div>
 
+	<h2>Turky</h2>
+
 	<div class="flex flex-col justify-center items-stretch gap-2">
 		<div class="flex justify-between items-center mb-2">
 			<label for="steps-range" class="block text-xl font-medium">مبلغ الاستثمار المبدئي</label>
